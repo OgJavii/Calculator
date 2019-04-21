@@ -1,2 +1,2 @@
-# MyCalculator
+# Calculator
 Convert $ amount
