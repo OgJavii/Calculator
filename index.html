@@ -1,67 +1,58 @@
 <html>
-    <head>
-            <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <h1>HTML CALCULATOR</h1>
-        <div id= "calc-parent">
-            <div class="row">
-                <div class="column" id="calc-display-val">0</div>                            
-            </div>
 
-            <div class="row">
-                <div class="calc-btn calc-btn-num column" id="calc-clear">AC</div>
-                <div class="calc-btn calc-btn-num column" id="calc-bakspace">&#8676;</div>
-                <div class="calc-btn calc-btn-operator column" id="calc-divide">&#247;</div>
-            </div>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
 
-            <div class="row">
-                <div class="calc-btn calc-btn-num column" id= "calc-seven">7</div>
-                <div class="calc-btn calc-btn-num column" id= "calc-eight">8</div>
-                <div class="calc-btn calc-btn-num column" id= "calc-nine">9</div>
-                <div class="calc-btn calc-btn-operator column" id="calc-multiply">x</div>                                   
+<body>
+  <h1>Fixed!!!</h1>
+  <div id="calc-parent">
+    <div class="row">
+      <div class="column" id="calc-display-val">0</div>
+    </div>
 
-            </div>
+    <div class="row">
 
-            <div class="row">
-                <div class="calc-btn calc-btn-num column" id= "calc-four">4</div>
-                <div class="calc-btn calc-btn-num column" id= "calc-five">5</div>
-                <div class="calc-btn calc-btn-num column" id= "calc-six">6</div>
-                <div class="calc-btn calc-btn-operator column" id="calc-minus">-</div>
+      <div class="calc-btn calc-btn-num column" id="calc-clear">AC</div>
+      <div class="calc-btn calc-btn-num column" id="calc-backspace">
+        &#8676;
+      </div>
+      <div onclick="operation('/')" class="calc-btn calc-btn-operator column" id="calc-divide">
+        &#247;
+      </div>
+    </div>
 
-            </div>
+    <div class="row">
+      <div onclick="buttonPressed(7)" class="calc-btn calc-btn-num column" id="calc-seven">7</div>
+      <div onclick="buttonPressed(8)" class="calc-btn calc-btn-num column" id="calc-eight">8</div>
+      <div onclick="buttonPressed(9)" class="calc-btn calc-btn-num column" id="calc-nine">9</div>
+      <div onclick="operation('*')" class="calc-btn calc-btn-operator column" id="calc-multiply">
+        x
+      </div>
+    </div>
 
-            <div class="row">
-                <div class="calc-btn calc-btn-num column" id= "calc-three">3</div>
-                <div class="calc-btn calc-btn-num column" id= "calc-two">2</div>
-                <div class="calc-btn calc-btn-num column" id= "calc-one">1</div>
-                <div class="calc-btn calc-btn-operator column" id="calc-plus">+</div>
+    <div class="row">
+      <div onclick="buttonPressed(4)" class="calc-btn calc-btn-num column" id="calc-four">4</div>
+      <div onclick="buttonPressed(5)" class="calc-btn calc-btn-num column" id="calc-five">5</div>
+      <div onclick="buttonPressed(6)" class="calc-btn calc-btn-num column" id="calc-six">6</div>
+      <div onclick="operation('-')" class="calc-btn calc-btn-operator column" id="calc-minus">-</div>
+    </div>
 
-            </div>
+    <div class="row">
+      <div onclick="buttonPressed(3)" class="calc-btn calc-btn-num column" id="calc-three">3</div>
+      <div onclick="buttonPressed(2)" class="calc-btn calc-btn-num column" id="calc-two">2</div>
+      <div onclick="buttonPressed(1)" class="calc-btn calc-btn-num column" id="calc-one">1</div>
+      <div onclick="operation('+')" class="calc-btn calc-btn-operator column" id="calc-plus">+</div>
+    </div>
 
-            <div class="row">
-                <div class="calc-btn calc-btn-num column" id= "calc-zero">0</div>
-                <div class="calc-btn column" id="calc-decimal">.</div>
-                <div class="calc-btn calc-btn-operator column" id="calc-equals">=</div>
+    <div class="row">
+      <div onclick="buttonPressed(0)" class="calc-btn calc-btn-num column" id="calc-zero">0</div>
+      <div onclick="buttonPressed('.')" class="calc-btn column" id="calc-decimal">.</div>
+      <div onclick="calculate()" class="calc-btn calc-btn-operator column" id="calc-equals">=</div>
+    </div>
+  </div>
 
-            </div>
+  <script src="calculator.js"></script>
+</body>
 
-        </div>  
-
-
-        <script>
-            const onebtn = document.getElementById("calc-one");
-            const twobtn = document.getElementById("calc-two");
-            const threebtn = document.getElementById("calc-three");
-            const fourtn = document.getElementById("calc-four");
-            const fivebtn = document.getElementById("calc-five");
-            const sixbtn = document.getElementById("calc-six");
-            const sevenbtn = document.getElementById("calc-seven");
-            const eightbtn = document.getElementById("calc-eight");
-            const ninebtn = document.getElementById("calc-nine");
-            const zerobtn = document.getElementById("calc-zero");
-
-
-        </script>
-    </body>
 </html>
